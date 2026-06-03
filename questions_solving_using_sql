@@ -1,0 +1,122 @@
+Business Question 1
+Question:
+
+Which employee has the highest salary?
+
+SQL Query
+SELECT Name, Salary
+FROM employees
+ORDER BY Salary DESC
+LIMIT 1;
+Result
+Name	Salary
+Omar	125000
+Insight
+
+Omar is the highest-paid employee.
+
+Business Question 2
+Question:
+
+Which employee has the lowest salary?
+
+SQL Query
+SELECT Name, Salary
+FROM employees
+ORDER BY Salary ASC
+LIMIT 1;
+Result
+Name	Salary
+John	65000
+Insight
+
+John receives the lowest salary.
+
+Business Question 3
+Question:
+
+What is the average salary of employees?
+
+SQL Query
+SELECT AVG(Salary) AS Average_Salary
+FROM employees;
+Result
+Average_Salary
+92300
+Insight
+
+The average employee salary is ₹92,300.
+
+Business Question 4
+Question:
+
+How many employees work in each department?
+
+SQL Query
+SELECT Department,
+COUNT(*) AS Employee_Count
+FROM employees
+GROUP BY Department;
+Result
+Department	Employee_Count
+Finance	2
+HR	3
+IT	3
+Marketing	2
+Insight
+
+HR and IT have the highest number of employees.
+
+Business Question 5
+Question:
+
+What is the total salary expenditure by department?
+
+SQL Query
+SELECT Department,
+SUM(Salary) AS Total_Salary
+FROM employees
+GROUP BY Department;
+Result
+Department	Total_Salary
+Finance	200000
+HR	233000
+IT	355000
+Marketing	135000
+Insight
+
+The IT department has the highest salary expenditure.
+
+Business Question 6
+Question:
+
+Which employees earn more than ₹100,000?
+
+SQL Query
+SELECT Name,
+Department,
+Salary
+FROM employees
+WHERE Salary > 100000;
+Result
+Name	Department	Salary
+Ali	IT	120000
+Fatima	IT	110000
+David	Finance	105000
+Omar	IT	125000
+Insight
+
+Four employees earn more than ₹100,000.
+
+Business Question 7
+Question:
+
+Show employees ranked by salary from highest to lowest.
+
+SQL Query
+SELECT Name,
+Department,
+Salary
+FROM employees
+ORDER BY Salary DESC;
+Insight
